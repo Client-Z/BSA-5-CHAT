@@ -1,7 +1,10 @@
-var app = require('express')();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
-var port = process.env.PORT || 3000;
+let express = require('express');
+let app = express();
+let http = require('http').Server(app);
+let io = require('socket.io')(http);
+let port = process.env.PORT || 3000;
+
+app.use(express.static('public'));
 
 app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');
@@ -38,13 +41,26 @@ io.on('connection', function(socket){
 	});
 
 	socket.on('chat message', function(msg){
-		socket.broadcast.emit('chat message', msg);
-		if (messages.length > 10) {
+		if (messages.length == 100) {
 			messages.shift();
 			messages.push(msg);
 		} else {
 			messages.push(msg);
 		}
+		
+		if (msg.includes('@')) {
+			let index = msg.indexOf('@');
+			let userNickName = '';
+			for (var i = index + 1; i < msg.length; i++) {
+				if (msg[i] != ' ' && msg[i] != ',') {
+					userNickName += msg[i];
+				}
+			}
+			socket.broadcast.emit('chat message', msg, userNickName);
+
+		} else { 
+			console.log(msg);
+			socket.broadcast.emit('chat message', msg); }
 	});
 
 	socket.on('is typing', (data) => {
