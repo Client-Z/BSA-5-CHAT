@@ -133,7 +133,7 @@
 			let textnode = document.createTextNode(msg); 
 			messageField.appendChild(textnode);
 			document.getElementById('messages').appendChild(messageField);
-			if (document.getElementById('messages').childNodes.length > 10) {
+			if (document.getElementById('messages').childNodes.length > 100) {
 				document.getElementById('messages').childNodes[0].remove();
 			}
 			window.scrollTo(0, document.body.scrollHeight);

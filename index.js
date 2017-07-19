@@ -89,6 +89,7 @@ io.on('connection', function(socket){
 
 	socket.on('disconnect', () => {
 		io.sockets.emit('update users', users);
+		socket.broadcast.emit('chat message', 'He was disconnected...');
 	});
 });
 
