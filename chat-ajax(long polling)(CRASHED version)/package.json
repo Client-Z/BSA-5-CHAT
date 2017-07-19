@@ -1,0 +1,24 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "supervisor node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaksPro/chat.git"
+  },
+  "author": "Kostia Vovkodav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaksPro/chat/issues"
+  },
+  "homepage": "https://github.com/BaksPro/chat#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.14.0"
+  }
+}

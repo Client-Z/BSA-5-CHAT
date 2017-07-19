@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">  
+    <div id="registration" > 
+        <div class="popup">
+            <p> User Name</p>
+            <input type="text" id="userName" placeholder="Enter name"  required />
+            <p> User Nickname<p>
+            <input type="text" id="nickName"  required placeholder="Enter Nickname"
+            required>
+            <button value="Registration" id="submitRegistration">Registration</button>              	
+        </div>
+    </div>
+        <div class="stats">
+            <ul id="userList">
+                
+            </ul>
+        </div>
+
+        <div id="messagelist">
+           
+        </div>
+    
+        <div class="sendMessage">
+        <textarea name="text" id="text" cols="30" rows="5"></textarea>  
+        <input type="submit" value="send" id="textSubmit">   
+       </div> 
+</div>
+</body>
+<script src="script.js">    </script>
+</html>

@@ -1,0 +1,60 @@
+.stats {
+    float: left;
+    padding: 20px;
+    background-color: rgba(124, 119, 250,1.0);
+    width: 20%;
+    height: 100%;
+}
+
+#messagelist {
+    width: 70%;
+    margin-left: 5%;
+}
+
+.sendMessage {
+    margin: 50px 10px;    
+    width: 100%;
+    align-self: center;
+}
+
+h1 {
+    width: 100%;
+    
+}
+
+#container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(96, 2, 138, 0.6);
+    padding: 10px;
+    color: #fff;
+}
+#text{
+    width: 100%;
+    height: 50px;
+}
+
+#textSubmit{
+   float: right;
+}
+
+#registration{
+    position: absolute;
+    padding: 20px 30px;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: #fc2;
+
+
+}
+.popup {
+    margin: 200px 500px;
+    width: 500px;
+    padding: 20px;
+    border: solid blue;
+    text-align: center;
+    background-color: #fff;
+}
