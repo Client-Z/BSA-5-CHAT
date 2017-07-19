@@ -54,8 +54,11 @@ io.on('connection', function(socket){
 			for (var i = index + 1; i < msg.length; i++) {
 				if (msg[i] != ' ' && msg[i] != ',') {
 					userNickName += msg[i];
+				} else {
+					break;
 				}
 			}
+			console.log(userNickName);
 			socket.broadcast.emit('chat message', msg, userNickName);
 
 		} else { 
