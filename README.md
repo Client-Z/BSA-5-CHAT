@@ -23,5 +23,5 @@
 
 0. git clone
 1. cd chat-socket.io/   
-2. node/nodemon index.js   
+2. npm start   
 3. open localhost:3000/
